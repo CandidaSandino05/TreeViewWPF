@@ -1,0 +1,48 @@
+﻿<Window x:Class="EJArbolWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EJArbolWPF"
+        mc:Ignorable="d"
+        Title="Ejemplo TreeView" Height="450" Width="800">
+    <StackPanel>
+        <TreeView x:Name="ArbolGenealogico">
+            <TreeViewItem Header="Familia Paterna" IsExpanded="True">
+                <TreeViewItem Header="Miembros de la familia"/>
+
+                <TreeViewItem Header="Abuelos Paternos" IsExpanded="True">
+                    <TreeViewItem Header=" Tios Paternos" />
+                    <TreeViewItem Header=" Tias Paternas " />
+                    <TreeViewItem Header=" Mi Padre " />
+                    <TreeViewItem Header=" Primos paternos " />
+                    <TreeViewItem Header=" Primas Paternas " />
+
+                </TreeViewItem>
+
+            </TreeViewItem>
+
+            <TreeViewItem Header=" Familia Materna " IsExpanded="False">
+                <TreeViewItem Header="Miembros de la familia Materna"/>
+                <TreeViewItem Header="Abuelos Maternos" IsExpanded="True">
+                    <TreeViewItem Header=" Tios Maternos " />
+                    <TreeViewItem Header=" Tias Maternas "/>
+                    <TreeViewItem Header=" Mi Madre " IsExpanded="True">
+                        <TreeViewItem Header=" Hermano Materno" IsExpanded="False">
+                            <TreeViewItem Header=" Sobrino" />
+                            <TreeViewItem Header="Sobrina" />
+                        </TreeViewItem>
+                        <TreeViewItem Header=" Hermana Materna "/>
+                    </TreeViewItem>
+                    <TreeViewItem Header=" Primos Maternos "/>
+                    <TreeViewItem Header=" Primas Maternas"/>
+
+                </TreeViewItem>
+            </TreeViewItem>
+
+        </TreeView>
+
+        <Button x:Name="btnAceptar" Click="btnAceptar_Click">Aceptar</Button>
+
+    </StackPanel>
+</Window>
